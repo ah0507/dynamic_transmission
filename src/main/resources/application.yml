@@ -1,0 +1,37 @@
+server:
+  port: 8889
+  servlet:
+    context-path:
+spring:
+  application:
+    name: dynamic_transmission
+  data:
+    mongodb:
+#      uri: mongodb://192.168.17.228:27017/bus
+#      uri: mongodb://localhost:27017/bus
+      host: 192.168.17.115
+      port: 27017
+      database: bus
+      username: root
+      password: root
+  datasource:
+      url: jdbc:mysql://192.168.17.115:3306/bus?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+#      url: jdbc:mysql://localhost:3306/bus?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+      username: root
+      password: root
+      driverClassName: com.mysql.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource
+logging:
+  level:
+    net.chensee: info
+
+expireTime: 120
+# 授权码
+usernameCode: ytodlw
+#动态资源（车辆轨迹运调实时数据）
+dynamicHost: 192.168.91.136
+#dynamicHost: localhost
+dynamicPort: 7792
+#dynamicPort: 8081
+
+
